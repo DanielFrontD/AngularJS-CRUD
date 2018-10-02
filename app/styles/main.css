@@ -1,0 +1,20 @@
+.panel-footer .btn{
+	background: #fff;
+}
+.panel-footer .btn.btn-success{
+	color: #4cae4c;
+}
+.panel-footer .btn.btn-danger{
+	color: #d43f3a;
+}
+.error{
+	color: #d43f3a;
+}
+button.no-background{
+	color:#76b3f9;
+	background: transparent;
+	border: transparent;
+}
+.filters button.no-background{
+	color: #555;
+}

@@ -1,0 +1,22 @@
+<div class="panel panel-default">
+	<form name="ctrl.serviceForm" ng-submit="ctrl.saveService()">
+		<div class="panel-body">
+			<div class="h3">Servicio</div>
+			<div class="form-group">
+				<label for="nombre">Nombre</label>
+				<input type="text" class="form-control" name="nombre" id="nombre" ng-model="ctrl.servicio.nombre" required>
+				<small class="error" ng-show="ctrl.serviceForm.nombre.$touched && ctrl.serviceForm.nombre.$error.required">Este campo es requerido</small>
+			</div>
+			<div class="form-group">
+				<label for="descripcion">Descripción</label>
+				<input type="text" class="form-control" name="descripcion" id="descripcion" ng-model="ctrl.servicio.descripcion" required>
+				<small class="error" ng-show="ctrl.serviceForm.descripcion.$touched && ctrl.serviceForm.descripcion.$error.required">Este campo es requerido</small>
+			</div>
+
+		</div>
+		<div class="panel-footer">
+			<button type="submit" class="btn btn-success btn-outline" ng-disabled="ctrl.serviceForm.$invalid">Grabar</button>
+			<button type="button" class="btn btn-danger btn-outline" ng-click="ctrl.clearForm()">Cancelar</button>
+		</div>
+  </form>
+</div>

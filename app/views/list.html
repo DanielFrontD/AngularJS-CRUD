@@ -1,0 +1,14 @@
+<div class="row">
+	<div class="col-sm-4" ng-repeat="servicio in ctrl.servicios | filter : ctrl.filter">
+		<div class="panel panel-default">
+			<div class="panel-body">
+				<h3 ng-bind="servicio.nombre.length > 20 ? (servicio.nombre | limitTo : 20) + '...' : servicio.nombre"></h3>
+				<p ng-bind="servicio.descripcion.length > 35 ? (servicio.descripcion | limitTo : 35) + '...' : servicio.descripcion"></p>
+			</div>
+			<div class="panel-footer">
+				<button class="no-background" type="button" ng-click="ctrl.getDetail(servicio.id)">Editar</button>
+				<button class="no-background" type="button" ng-click="ctrl.deleteService(servicio.id)">Eliminar</button>
+			</div>
+		</div>
+	</div>
+</div>
